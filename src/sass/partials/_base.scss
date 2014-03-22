@@ -1,0 +1,68 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "breakpoint";
+
+@import "susy";
+
+@import "modules/all";
+
+$susy: layout(12 inside-static show);
+
+$pink: rgb(25, 0, 128);
+
+header, nav, main, footer {
+  @include background(linear-gradient(top left, rgba($pink, 0.125), rgba($pink, 0.125)), rgba($pink, 0.25));
+  @include rhythm;
+}
+
+body {
+  @include container;
+}
+
+header {
+  @include full;
+}
+
+nav {
+  @include span(first 3);
+}
+
+main {
+  @include span(last 9);
+}
+
+footer {
+  @include full;
+}
+
+#box-of-text {
+  //+ellipsis
+  //+nowrap
+  width: 400px;
+  //height: 200px
+  @include box-shadow;
+  @include single-text-shadow(#dddddd, -1px, 1px);
+  background: #999999;
+}
+
+ul.words {
+  @include delimited-list("! ");
+}
+
+.motion {
+  @include text-shadow(rgba(black, 0.5) -100px 0 0, rgba(black, 0.4) -200px 0 0, rgba(black, 0.3) -300px 0 0, rgba(black, 0.2) -400px 0 0);
+  font-style: italic;
+  text-align: right;
+}
+
+.simon {
+  @include border-radius(100px);
+  @include box-shadow(black 0 0 0 25px, red 0 -50px 0, blue 50px 0px 0, yellow 0 50px 0, lime -50px 0 0);
+  background: #999999;
+  color: white;
+  height: 50px;
+  margin: 100px auto;
+  padding: 40px;
+  text-align: center;
+  width: 50px;
+}

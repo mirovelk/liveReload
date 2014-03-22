@@ -1,0 +1,9 @@
+{
+    "html": {
+        "preserve_newlines": true
+    }
+    "js": {
+        "jslint_happy": true,
+        "preserve_newlines": true
+    }
+}
